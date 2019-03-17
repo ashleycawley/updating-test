@@ -8,7 +8,7 @@ SCRIPTNAME=`basename "$0"`
 # Storing the full path and filename in a variable:
 FULLSCRIPTPATH="`pwd`/$SCRIPTNAME"
 
-UPDATE_SOURCE="https://raw.githubusercontent.com/ashleycawley/bash-self-updater/master/self-updating.sh"
+UPDATE_SOURCE="https://raw.githubusercontent.com/ashleycawley/updating-test/master/self-maintaining-script.sh"
 
 # URL to check to see if update should proceed
 TWOFA="http://status.ashleycawley.co.uk/update-updating-test.txt"
