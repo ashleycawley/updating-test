@@ -71,6 +71,6 @@ else
     echo "Local & Remote md5sum are equal - This script is up to date."
 fi
 
-echo "Hello World! - `date`" >> ~ self-updating-test.txt
+echo "Hello World! - `date`" >> ~/self-updating-test.txt
 
 exit 0
