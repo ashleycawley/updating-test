@@ -8,4 +8,4 @@ UPDATE_SOURCE="https://raw.githubusercontent.com/ashleycawley/updating-test/mast
 # URL to check to see if update should proceed
 UPDATE_AUTH_CHECK_URL="http://status.ashleycawley.co.uk/update-updating-test.txt"
 
-source ./update.lib
+source `pwd`/update.lib
