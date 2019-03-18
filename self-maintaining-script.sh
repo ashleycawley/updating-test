@@ -12,14 +12,14 @@ TWOFA="http://status.ashleycawley.co.uk/update-updating-test.txt"
 TWOFA_TEMP_FILE="/tmp/update-2fa.txt"
 
 # Scripts current md5sum hash
-MY_MD5=(`md5sum $0`)
+MD5_OF_LOCAL_SCRIPT=(`md5sum $0`)
 
 # Downloads script from source URL, extracts md5sum and then deletes the temporary file
 ONLINE_MD5=(`wget -q -O /tmp/testing.md5 $UPDATE_SOURCE; md5sum /tmp/testing.md5 | awk '{print $1}'; rm -f /tmp/testing.md5`)
 
 # Functions
 function MD5_COMPARISON {
-    echo "Local  : $MY_MD5"
+    echo "Local  : $MD5_OF_LOCAL_SCRIPT"
     echo "Remote : $ONLINE_MD5"
     echo
 }
@@ -30,7 +30,7 @@ MD5_COMPARISON
 
 echo -e "Comparison check: \c"
 
-if [ $MY_MD5 != $ONLINE_MD5 ]
+if [ $MD5_OF_LOCAL_SCRIPT != $ONLINE_MD5 ]
 then
     echo "Version Mismatch!
     "
@@ -57,7 +57,7 @@ then
     echo "Performing another md5sum check local vs remote..."
 
     # Scripts current md5sum hash
-    MY_MD5=(`md5sum $0`)
+    MD5_OF_LOCAL_SCRIPT=(`md5sum $0`)
     
     # Downloads script from source URL, extracts md5sum and then deletes the temporary file
     ONLINE_MD5=(`wget -q -O /tmp/testing.md5 $UPDATE_SOURCE; md5sum /tmp/testing.md5 | awk '{print $1}'; rm -f /tmp/testing.md5`)
