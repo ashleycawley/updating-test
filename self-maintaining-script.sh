@@ -30,7 +30,7 @@ function MD5_COMPARISON {
 }
 
 # Script
-echo "Self-Update Initiated:`date`"
+echo "Self Update Initiated: `date`"
 MD5_COMPARISON
 
 echo -e "Comparison check: \c"
