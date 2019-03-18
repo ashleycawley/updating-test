@@ -17,7 +17,7 @@ TWOFA="http://status.ashleycawley.co.uk/update-updating-test.txt"
 TWOFA_TEMP_FILE="/tmp/update-2fa.txt"
 
 # Scripts current md5sum hash
-MY_MD5=(`md5sum $FULLSCRIPTPATH`)
+MY_MD5=(`md5sum $0`)
 
 # Downloads script from source URL, extracts md5sum and then deletes the temporary file
 ONLINE_MD5=(`wget -q -O /tmp/testing.md5 $UPDATE_SOURCE; md5sum /tmp/testing.md5 | awk '{print $1}'; rm -f /tmp/testing.md5`)
@@ -46,8 +46,8 @@ then
         echo "Downloading newer version from $UPDATE_SOURCE"
 
         # Downloads new version and makes it executable
-        wget -q -O $FULLSCRIPTPATH $UPDATE_SOURCE
-        chmod +x $FULLSCRIPTPATH
+        wget -q -O $0 $UPDATE_SOURCE
+        chmod +x $0
 
         # Clean up temporary 2FA file
         rm -f $TWOFA_TEMP_FILE
@@ -61,7 +61,7 @@ then
     echo "Performing another md5sum check local vs remote..."
 
     # Scripts current md5sum hash
-    MY_MD5=(`md5sum $FULLSCRIPTPATH`)
+    MY_MD5=(`md5sum $0`)
     
     # Downloads script from source URL, extracts md5sum and then deletes the temporary file
     ONLINE_MD5=(`wget -q -O /tmp/testing.md5 $UPDATE_SOURCE; md5sum /tmp/testing.md5 | awk '{print $1}'; rm -f /tmp/testing.md5`)
