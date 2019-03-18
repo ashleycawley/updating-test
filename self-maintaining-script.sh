@@ -71,6 +71,6 @@ else
     echo "Local & Remote md5sum are equal - This script is up to date."
 fi
 
-echo "Third Change, 5min CRON - `date`" >> ~/self-updating-test.txt
+echo "Forth Change, 5min CRON at work - `date`" >> ~/self-updating-test.txt
 
 exit 0
