@@ -2,12 +2,7 @@
 
 # Variables
 
-# This stores script-name.sh inside the variable $SCRIPTNAME
-SCRIPTNAME=`basename "$0"`
-
-# Storing the full path and filename in a variable:
-FULLSCRIPTPATH="`pwd`/$SCRIPTNAME"
-
+# URL to Source Repo which is checked (where the raw script code is hosted)
 UPDATE_SOURCE="https://raw.githubusercontent.com/ashleycawley/updating-test/master/self-maintaining-script.sh"
 
 # URL to check to see if update should proceed
