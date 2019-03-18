@@ -30,6 +30,7 @@ function MD5_COMPARISON {
 }
 
 # Script
+echo "Self-Update Initiated:`date`"
 MD5_COMPARISON
 
 echo -e "Comparison check: \c"
@@ -71,7 +72,6 @@ else
     echo "Local & Remote md5sum are equal - This script is up to date."
 fi
 
-echo "`date`"
 echo "================================================================="
 
 exit 0
