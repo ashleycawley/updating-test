@@ -71,6 +71,6 @@ else
     echo "Local & Remote md5sum are equal - This script is up to date."
 fi
 
-echo "Fifth Change ##### :-) - `date`"
+echo "`date`"
 
 exit 0
