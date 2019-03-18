@@ -15,6 +15,7 @@ function MD5_COMPARISON {
 }
 
 # Script
+echo "=======================Library Implemented=================================="
 echo "Self Update Initiated: `date`"
 MD5_COMPARISON
 
