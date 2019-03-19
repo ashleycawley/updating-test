@@ -15,8 +15,8 @@ function MD5_COMPARISON {
 }
 
 # Script
-echo "=======================Library Implemented=================================="
-echo "Self Update Initiated: `date`"
+echo "==================== Auto Update Initiated `date` ===================="
+
 MD5_COMPARISON
 
 echo -e "Comparison check: \c"
@@ -58,4 +58,4 @@ else
     echo "Local & Remote md5sum are equal - This script is up to date."
 fi
 
-echo "=======================Library Implemented=================================="
+echo "==================== Auto Update Completed `date` ===================="
